@@ -1,0 +1,24 @@
+version: '3'
+services:
+  backend-main:
+    build: 
+      dockerfile: Dockerfile
+      context: ./backend-main 
+    volumes:
+      - /app/node_modules 
+      - ./backend-main:/app
+    ports:
+      - "3001:3000"
+    environment:
+      - DG_MESSAGE=Hello from local dev environment
+  webapp-main:
+    build: 
+      dockerfile: Dockerfile
+      context: ./webapp-main 
+    volumes:
+      - /app/node_modules 
+      - ./webapp-main:/app
+    ports:
+      - "3002:3000"
+    stdin_open: true
+    tty: true
