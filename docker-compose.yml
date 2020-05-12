@@ -11,6 +11,13 @@ services:
       - "3001:3000"
     environment:
       - DG_MESSAGE=Hello from local dev environment
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=
+      - PGPORT=5432
+  db-main:
+    image: postgres:11
   webapp-main:
     build: 
       dockerfile: Dockerfile
