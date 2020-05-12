@@ -1,5 +1,5 @@
 {
-  "hosting": {
+  "hosting": [{
     "site": "dg-myapp",
     "public": "build",
     "ignore": [
@@ -13,5 +13,19 @@
         "destination": "/index.html"
       }
     ]
-  }
+  }, {
+    "site": "dg-myapp-dev",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }]
 }
