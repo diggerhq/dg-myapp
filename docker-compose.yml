@@ -19,6 +19,6 @@ services:
       - /app/node_modules 
       - ./webapp-main:/app
     ports:
-      - "3002:3000"
+      - "3000:3000"
     stdin_open: true
     tty: true
