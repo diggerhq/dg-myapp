@@ -20,7 +20,7 @@ This is essentially a full-stack "hello world"
 - Frontend: Firebase CDN
 - Backend: Google Cloud Run
 
-3 environments:
+## environments:
 - Production: [dg-myapp.web.app](https://dg-myapp.web.app)
 - Development: [dg-myapp-dev.web.app](https://dg-myapp-dev.web.app)
 - Local: docker-compose
