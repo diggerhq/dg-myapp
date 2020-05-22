@@ -3,7 +3,7 @@
 This is essentially a full-stack "hello world"
 - It shows a message
 - Which  is coming from the backend
-- Which in turn is taken from configuration
+- Which in turn is taken from configuration via environment variables
 - Which can be different in each environment
 
 ## local setup
