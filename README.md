@@ -22,6 +22,6 @@ This is essentially a full-stack "hello world"
 
 3 environments:
 - Production: [dg-myapp.web.app](https://dg-myapp.web.app)
-- Development: roduction: [dg-myapp-dev.web.app](https://dg-myapp-dev.web.app)
+- Development: [dg-myapp-dev.web.app](https://dg-myapp-dev.web.app)
 - Local: docker-compose
 
