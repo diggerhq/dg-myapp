@@ -13,10 +13,13 @@ jobs:
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
+    - name: pwd
+      run:
+        echo $(pwd)
     - name: build image and push to gcr.io
       uses: docker/build-push-action@v1
       with:
-        path: ../../backend-main
+        path: backend-main
         username: _json_key
         password: ${{ secrets.GCLOUD_SERVICE_KEY }}
         registry: eu.gcr.io
