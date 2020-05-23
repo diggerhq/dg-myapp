@@ -33,6 +33,6 @@ jobs:
         gcloud run deploy "dg-myapp-backend-main" \
           --quiet \
           --region "europe-west1" \
-          --image "eu.gcr.io/digger-boot-267123/dg-myapp-backend-main@latest" \
+          --image "eu.gcr.io/digger-boot-267123/dg-myapp-backend-main:latest" \
           --platform "managed" \
           --allow-unauthenticated
