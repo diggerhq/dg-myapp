@@ -11,7 +11,9 @@ jobs:
     name: build docker image
     runs-on: ubuntu-latest
     steps:
-    - name: build 
+    - name: Check out the repo
+      uses: actions/checkout@v2
+    - name: build image and push to gcr.io
       uses: docker/build-push-action@v1
       with:
         dockerfile: ../../backend-main/Dockerfile
