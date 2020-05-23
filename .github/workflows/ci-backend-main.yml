@@ -1,0 +1,22 @@
+name: backend-main-ci
+on:
+  push:
+    paths:
+    - 'backend-main/**'
+defaults:
+  run:
+    working-directory: backend-main
+jobs:
+  build:
+    name: build docker image
+    runs-on: ubuntu-latest
+    steps:
+    - name: build 
+      uses: raccoondev/push-docker-gcr
+      with:
+        gcr_host: eu.gcr.io
+        image_name: my_image
+        image_tag: latest
+      env:
+        GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
