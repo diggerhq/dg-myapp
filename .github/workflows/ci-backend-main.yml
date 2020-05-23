@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
-    - name: build image and push to gcr.io
+    - name: Build image and push to gcr.io
       uses: docker/build-push-action@v1
       with:
         path: backend-main
@@ -22,3 +22,9 @@ jobs:
         registry: eu.gcr.io
         repository: digger-boot-267123/dg-myapp-backend-main
         tags: latest
+    - name: Set up Google Cloud CLI
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '290.0.1'
+        service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        project_id: digger-boot-267123
