@@ -23,11 +23,11 @@ jobs:
         repository: digger-boot-267123/dg-myapp-backend-main
         tags: latest
     - name: Set up Google Cloud CLI
-    uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-    with:
-      version: '290.0.1'
-      service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
-      project_id: digger-boot-267123
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '290.0.1'
+        service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        project_id: digger-boot-267123
     - name: Deploy to Google Cloud Run
       run: |-
         gcloud run deploy "dg-myapp-backend-main" \
