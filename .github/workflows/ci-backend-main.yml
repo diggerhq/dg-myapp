@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: build 
-      uses: raccoondev/push-docker-gcr
+      uses: RaccoonDev/push-docker-gcr
       with:
         gcr_host: eu.gcr.io
         image_name: my_image
