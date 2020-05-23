@@ -24,6 +24,7 @@ jobs:
         tags: latest
   deploy:
     name: Deploy service
+    runs-on: ubuntu-latest
     steps:
     - name: Set up Google Cloud CLI
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
