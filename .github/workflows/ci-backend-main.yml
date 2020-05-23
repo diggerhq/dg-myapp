@@ -12,11 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: build 
-      uses: RaccoonDev/push-docker-gcr@v1
+      uses: docker/build-push-action@v1
       with:
-        gcr_host: eu.gcr.io
-        image_name: my_image
-        image_tag: latest
-      env:
-        GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
-        GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
+        username: _json_key
+        password: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        registry: eu.gcr.io
+        repository: digger-boot-267123/dg-myapp-backend-main
+        tags: latest
