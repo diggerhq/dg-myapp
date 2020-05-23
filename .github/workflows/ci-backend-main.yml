@@ -14,7 +14,7 @@ jobs:
     - name: build 
       uses: docker/build-push-action@v1
       with:
-        path: ../../backend-main
+        path: backend-main
         username: _json_key
         password: ${{ secrets.GCLOUD_SERVICE_KEY }}
         registry: eu.gcr.io
