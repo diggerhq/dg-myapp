@@ -28,3 +28,11 @@ jobs:
         version: '290.0.1'
         service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
         project_id: digger-boot-267123
+    - name: Deploy to Google Cloud Run
+      run: |-
+        gcloud run deploy "dg-myapp-backend-main" \
+          --quiet \
+          --region "europe-west1" \
+          --image "eu.gcr.io/digger-boot-267123/dg-myapp-backend-main@latest" \
+          --platform "managed" \
+          --allow-unauthenticated
