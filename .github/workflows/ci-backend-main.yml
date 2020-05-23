@@ -8,7 +8,7 @@ defaults:
     working-directory: backend-main
 jobs:
   build:
-    name: build docker image
+    name: Build and push image
     runs-on: ubuntu-latest
     steps:
     - name: Check out the repo
@@ -22,6 +22,9 @@ jobs:
         registry: eu.gcr.io
         repository: digger-boot-267123/dg-myapp-backend-main
         tags: latest
+  deploy:
+    name: Deploy service
+    steps:
     - name: Set up Google Cloud CLI
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
